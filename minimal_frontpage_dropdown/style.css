@@ -1,0 +1,83 @@
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgb(72,83,112);
+}
+
+.main-menu-container {
+  padding-top: 50px;
+}
+
+.main-menu {
+  padding: 0;
+  border-bottom: 3px solid #68d2c3;
+  /* az inline-block reagál a text-align: center-re */
+  text-align: center;
+}
+
+
+.main-menu-item {
+  display: inline-block;
+
+}
+
+.main-menu-item a {
+  display: block;
+  text-decoration: none;
+  color: #e9e4ff;
+  width: 120px;
+  /* alul-fölül 20px, jobbra-balra 0 */
+  padding: 20px 0;
+}
+
+.main-menu-item:hover a {
+  color: white;
+  background-color: rgba(41, 47, 48, 0.2);
+}
+
+.main-content {
+  color: white;
+  width: 800px;
+  /*
+   * ha négy érték van megadva akkor: fent, jobbra, lent, balra 
+   * (óramutató járásával megegyező irányba)
+   */
+  margin: 40px auto 0 auto;
+}
+
+header {
+  width: 400px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* header-ön belül lévő p tag */
+header p {
+  font-size: 22px;
+  margin: 0 0 30px 0;
+}
+
+.company-image {
+  /* egyszerű jobbra igazítás  */
+  float: right;
+}
+
+main {
+  width: 500px;
+  line-height: 1.6;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
