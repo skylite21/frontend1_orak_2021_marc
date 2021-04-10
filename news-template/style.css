@@ -1,0 +1,93 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: rgb(242, 237, 228);
+  margin: 0;
+}
+
+header,
+main {
+  /* vw: viewport width: a böngésző szélességéhez képest 80 egység 
+   * vh: viewport height: a böngésző magasságához képest...*/
+  width: 80vw;
+  margin: 0 auto;
+}
+
+header {
+  /*
+   * monstantól ez az elem flex konténer, a közvetlen gyerekei pedig
+   * fled item-ek
+   */
+  display: flex;
+}
+
+/* 1rem = 16px */
+.logo {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logo > h1 {
+  font-size: 2.25rem;
+  margin: 0;
+  padding: 0;
+  border-bottom: 4px solid black;
+}
+
+.logo > h2 {
+  font-size: 1rem;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  font-style: italic;
+  line-height: 0;
+  color: rgba(90, 86, 79, 1);
+  letter-spacing: 0.3rem;
+}
+
+.menu-container {
+  /* az elem szélessége legyen akkora amekkora csak lehet */
+  flex-grow: 1;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  flex-grow: 1;
+}
+
+.menu-item:nth-child(1) {
+  border-bottom: 4px solid red;
+}
+
+.menu-item:nth-child(2) {
+  border-bottom: 4px solid lightblue;
+}
+
+.menu-item:nth-child(3) {
+  border-bottom: 4px solid plum;
+}
+
+.menu-item:nth-child(4) {
+  border-bottom: 4px solid green;
+}
+
+.menu-item:nth-child(5) {
+  border-bottom: 4px solid yellow;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: black;
+  /* a magasság inline elemeken nem érvényes */
+  height: 2rem;
+  /* ez az elem már nem inline elem, hanem flex konténer */
+  /* a flex item-ek itt, a menüpontban lévő karakterek... */
+  display: flex;
+  /* függőleges középre igazítás: */
+  align-items: center;
+  /* vízszintes középre igazítás: */
+  justify-content: center;
+}
