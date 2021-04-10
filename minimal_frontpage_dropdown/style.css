@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: rgb(72,83,112);
+  background-color: rgb(32, 38, 53);
 }
 
 .main-menu-container {
@@ -24,22 +24,51 @@ body {
 
 .main-menu-item {
   display: inline-block;
-
+  position: relative;
 }
 
-.main-menu-item a {
+.main-menu-item a,
+.main-menu-item span {
   display: block;
   text-decoration: none;
-  color: #e9e4ff;
-  width: 120px;
+  color: #54beff;
   /* alul-fölül 20px, jobbra-balra 0 */
   padding: 20px 0;
 }
 
-.main-menu-item:hover a {
-  color: white;
-  background-color: rgba(41, 47, 48, 0.2);
+/* itt külön csak a főmenüpontokra állítunk szélességet */
+.main-menu-item > a,
+.main-menu-item span {
+  width: 120px;
 }
+
+/* közvetlen gyereket jelent a > jel */
+.main-menu-item:hover > a,
+.main-menu-item:hover span {
+  color: white;
+  background-color: rgb(34, 116, 175);
+  cursor: pointer;
+}
+
+.sub-menu {
+  list-style: none;
+  background-color: rgb(34, 116, 175);
+  padding: 0;
+  position: absolute;
+  top: 59px;
+  width: 200px;
+  display: none;
+}
+
+.main-menu-item:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu-item:hover a {
+  background-color: rgb(66,130,177);
+  color: white;
+}
+
 
 .main-content {
   color: white;
