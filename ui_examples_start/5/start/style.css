@@ -1,0 +1,112 @@
+html {
+  font-size: 62.5%;
+
+  /* from now on we can use rem units, and 1 rem will mean 10px */
+  font-family: 'Heebo', sans-serif;
+  background-color: #333448;
+}
+
+body {
+  margin: 0;
+}
+
+/* TODO position everything relative to the .main-slideshow */
+.main-slideshow {
+  margin-top: 2vw;
+}
+
+/* TODO position the slideshow-bg behind the text */
+.slideshow-bg {
+}
+
+.main-slideshow .swiper-container {
+  /* height: 35vw; */
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+/* TODO slide items should be flex containers and center items horizontally */
+.main-slideshow .swiper-slide {
+}
+
+/* TODO position everything inside the white box relative to the white-box */
+.slide-inner {
+  margin-left: 10vw;
+  background-color: white;
+  padding: 5vw;
+}
+
+/* TODO the blue thick line is a div now, not an after */
+.left-color {
+  background-color: #acd9f7;
+  box-shadow: -26px 0 25px -21px rgba(0, 0, 0, 0.43) inset;
+}
+
+.slide-title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1.3rem;
+  margin: 10px 0 5px 0;
+}
+
+.slide-subtitle {
+  font-size: 2rem;
+  margin: 5px 0 20px 0;
+}
+
+.slide-p {
+  line-height: 2;
+  font-size: 1.3rem;
+}
+
+.swiper-button-white {
+  padding: 1.4vw;
+  background-color: #00000070;
+  margin: 0;
+}
+
+/* TODO position the swiper nav buttons to the edges */
+.swiper-button-prev {
+  outline: none;
+}
+
+/* TODO position the swiper nav buttons to the edges */
+.swiper-button-next {
+  outline: none;
+}
+
+@media (min-width: 1600px) {
+  .main-slideshow .swiper-container {
+    height: 600px;
+    width: 1900px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-slideshow .swiper-container {
+    height: 45vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-slideshow .swiper-container {
+    height: 500px;
+  }
+
+  .slide-inner {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .main-slideshow .swiper-container {
+    height: 500px;
+  }
+}

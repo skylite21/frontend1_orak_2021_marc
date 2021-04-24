@@ -1,0 +1,74 @@
+
+/* turning on border-box to make things convinient */
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after,
+*:hover {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #606366;
+}
+
+.icon-block {
+  padding-left: 70px;
+  font-size: 0.875rem;
+
+  /* TODO position everything inside, relative to this element */
+  width: 300px;
+}
+
+.icon-block a {
+  text-decoration: none;
+  color: #34383d;
+}
+
+.icon-block h6 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+/* TODO position the icon to the left , inner items should be centered
+ * setup height, configure the initial purple border
+/* format the icon, add transition
+* */
+.fontawesome-icon {
+  font-size: 25px;
+  color: #a255c4;
+}
+
+/* TODO create the circles, setup transition and initial values for the transition */
+.fontawesome-icon::after,
+.fontawesome-icon::before {
+  z-index: -1;
+}
+
+/* TODO create the purple background */
+.fontawesome-icon::before {
+}
+
+/* TODO create the white circle, add transition delay  */
+.fontawesome-icon::after {
+}
+
+/* TODO animate the white ring when someone hovers over the .icon-block */
+.icon-block:hover .fontawesome-icon::after {
+}
+
+/* TODO animate the purple background when someone hovers over the .icon-block */
+.icon-block:hover .fontawesome-icon::before {
+}
+
+/* TODO make the icon white on hover */
+.icon-block:hover .fontawesome-icon {
+}
+
+/* TODO make the read more purple on hover */
+.icon-block:hover .read-more {
+}

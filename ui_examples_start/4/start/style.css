@@ -1,0 +1,154 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* need to switch to border box to make things easier */
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after,
+*:hover {
+  box-sizing: border-box;
+}
+
+.view-title,
+.view-header {
+  text-align: center;
+  font-weight: 300;
+}
+
+.view-title {
+  font-size: 45px;
+}
+
+.view-header {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.view-content {
+  padding-top: 20px;
+
+  /* main boxes should be flex */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* position everything relative to the category-box */
+.category-box {
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  margin-left: 1.5vw;
+  margin-bottom: 1.5vw;
+}
+
+/* TODO position inner title inside image boxes  */
+.category-title {
+  /* color: #fff; */
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  text-transform: uppercase;
+  text-align: left;
+
+  /* TODO category text dissapears on hover,
+  has to have an initial value for transitions */
+}
+
+/* TODO position inner content inside image boxes  */
+.sub-categories {
+  font-size: 16px;
+  line-height: 19px;
+
+  /* color: #fff; */
+  font-weight: bold;
+  padding: 20px 20px;
+
+  /* TODO need initial opacity value for transitions */
+}
+
+/* styling for links inside boxes */
+.sub-categories a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 13px;
+
+  /* color: #fff; */
+}
+
+/* TODO POSITION the red border on hover  */
+.category-box::after {
+  content: "";
+
+  /* TODO make the border appear by uncommenting the following line */
+
+  /* border: 13px solid #cc424c; */
+  border-radius: 5px;
+  z-index: -1;
+  transition: top 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.category-img img {
+  /* http://loopj.com/2008/06/16/removing-gaps-under-images-in-css/ */
+  display: block;
+  border-radius: 5px;
+}
+
+/* TODO POSITION darken overlay on category image (red only comes on hover...) */
+.category-img::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* shift the red border on hover
+ active and focus are added so hover works on touch as well */
+.category-box:hover::after,
+.category-box:focus::after {
+  top: -22px;
+  left: -22px;
+}
+
+/* TODO scale category-box content on hover */
+.category-box:hover,
+.category-box:focus {
+  background: #cc424c;
+}
+
+/* add red background on hover */
+.category-box:hover .category-img::after,
+.category-box:focus .category-img::after {
+  background: rgba(181, 41, 51, 0.5);
+}
+
+.sub-categories a:hover,
+.sub-categories a:focus {
+  text-decoration: underline;
+}
+
+/* TODO inside boxes title is hidden on hover */
+.category-box:hover .category-title,
+.category-box:focus .category-title {
+}
+
+/* TODO display content inside boxes on hover  */
+.category-box:hover .sub-categories,
+.category-box:focus .sub-categories {
+}
+
+@media (max-width: 580px) {
+  .view-title {
+    font-size: 30px;
+  }
+}
+
+.js-hidden {
+  display: none;
+}

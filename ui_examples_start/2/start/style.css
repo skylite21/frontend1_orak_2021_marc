@@ -1,0 +1,73 @@
+.no-selection {
+  user-select: none;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.js-form-type-checkbox {
+  width: 130px;
+  position: relative;
+  color: white;
+  background: #2e2358;
+  font-size: 20px;
+  padding: 10px;
+}
+
+input,
+label {
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* TODO hide the original checkbox as we dont need it  */
+}
+
+/* before is the tick, after is the box */
+[type="checkbox"] + label::before,
+[type="checkbox"] + label::after {
+  content: '';
+  position: absolute;
+  border-radius: 2px;
+
+  /* https://stackoverflow.com/questions/40530101/why-is-translatey-50-needed-to-center-an-element-which-is-at-top-50  */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  transition: 0.2s;
+}
+
+/* TODO if the box is not checked just display it with border  */
+[type="checkbox"]:not(:checked) + label::after {
+}
+
+/* TODO if the box is checked display it with border and background  */
+[type="checkbox"]:checked + label::after {
+}
+
+/* TODO if the box is checked, display the tick which is created with border */
+[type="checkbox"]:checked + label::before {
+  transform: rotateZ(37deg);
+
+  /* rotation pivot point  */
+  transform-origin: 100% 100%;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
