@@ -243,6 +243,7 @@ header {
     text-align: center;
     z-index: -1;
     width: 50%;
+    display: none;
   }
 
   header .main-menu ul {
@@ -264,6 +265,14 @@ header {
     order: 3;
     height: 46px;
   }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.5rem;
+  }
 }
 
 .js-hidden {
@@ -272,4 +281,8 @@ header {
 
 .js-menu-open {
   right: 50%;
+}
+
+.main-menu.js-show {
+  display: block;
 }
